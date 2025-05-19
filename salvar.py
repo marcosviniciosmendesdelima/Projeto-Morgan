@@ -2,7 +2,7 @@
 import json
 
 # Criar uma função chamada carregar_dados()
-# - Tenta abrir o arquivo "musicas.json" em modo de leitura
+# - Tenta abrir o arquivo "musicas.json" em modo de leitura -> with open("musicas.json", "r", encoding="utf-8") as arquivo:
 # - Se conseguir, usa json.load() para transformar o conteúdo em uma lista de dicionários
 # - Se o arquivo não existir ou der erro, retorna uma lista vazia
 # - Dica: usar try/except para tratar erros de arquivo
