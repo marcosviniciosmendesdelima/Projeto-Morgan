@@ -1,0 +1,68 @@
+[
+  {
+    "nome": "Evidências",
+    "artista": "Chitãozinho & Xororó",
+    "gênero": "Sertanejo",
+    "duração": "4:30"
+  },
+  {
+    "nome": "Tempo Perdido",
+    "artista": "Legião Urbana",
+    "gênero": "Rock",
+    "duração": "4:45"
+  },
+  {
+    "nome": "Asa Branca",
+    "artista": "Luiz Gonzaga",
+    "gênero": "Forró",
+    "duração": "3:20"
+  },
+  {
+    "nome": "Lanterna dos Afogados",
+    "artista": "Paralamas do Sucesso",
+    "gênero": "Rock",
+    "duração": "3:55"
+  },
+  {
+    "nome": "Tocando em Frente",
+    "artista": "Almir Sater",
+    "gênero": "Música Popular Brasileira",
+    "duração": "4:50"
+  },
+  {
+    "nome": "Metade de Mim",
+    "artista": "Oswaldo Montenegro",
+    "gênero": "MPB",
+    "duração": "3:40"
+  },
+  {
+    "nome": "O Segundo Sol",
+    "artista": "Cássia Eller",
+    "gênero": "Rock",
+    "duração": "4:25"
+  },
+  {
+    "nome": "Romaria",
+    "artista": "Renato Teixeira",
+    "gênero": "Sertanejo",
+    "duração": "3:35"
+  },
+  {
+    "nome": "Pais e Filhos",
+    "artista": "Legião Urbana",
+    "gênero": "Rock",
+    "duração": "5:05"
+  },
+  {
+    "nome": "Andar com Fé",
+    "artista": "Gilberto Gil",
+    "gênero": "MPB",
+    "duração": "3:15"
+  },
+  {
+    "nome": "Céu Azul",
+    "artista": "Charlie Brown Jr.",
+    "gênero": "Rock",
+    "duração": "3:32"
+    }
+]
