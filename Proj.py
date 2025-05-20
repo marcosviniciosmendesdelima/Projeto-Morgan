@@ -1,5 +1,5 @@
 import json
-
+#TESTE 12:14
 def carregar_dados():
     try:
         with open("musicas.json", "r", encoding="utf-8") as arquivo:
