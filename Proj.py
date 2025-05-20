@@ -1,5 +1,5 @@
 import json
-#TESTE 12:14
+
 def carregar_dados():
     try:
         with open("musicas.json", "r", encoding="utf-8") as arquivo:
@@ -11,7 +11,7 @@ def salvar_dados():
     with open("musicas.json", "w", encoding="utf-8") as arquivo:
         json.dump(musicas, arquivo, ensure_ascii=False, indent=4)
 
-musicas = carregar_dados() # Carrega as músicas do arquivo JSON (fora da função)
+musicas = carregar_dados() 
 
 def menu():
     print("\n--- MENU ---")
