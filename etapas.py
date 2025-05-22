@@ -1,21 +1,37 @@
-# Criar uma nova função chamada buscar_musicas()
+# Função para editar uma música
+def editar_musica():
+    # Verificar se há músicas cadastradas
+    # Se não houver, mostrar mensagem e sair da função
 
-def buscar_musicas():
-    # Mostrar opções de busca: por artista ou por gênero
-    print("Buscar por:")
-    print("[1] Artista")
-    print("[2] Gênero")
+    # Listar todas as músicas com índices
+    # Pedir ao usuário o número da música que deseja editar
 
-    # Receber a escolha do usuário
-    # Usar input()
+    # Verificar se o número digitado é válido (dentro da lista)
 
-    # Receber o termo de busca (ex: nome do artista ou gênero)
-    # Dica: usar .lower() para deixar a comparação sem diferença de maiúsculas/minúsculas
+    # Exibir os dados atuais da música escolhida
 
-    # Buscar essas musicas no musicas.json
+    # Para cada campo (nome, artista, gênero, duração):
+    # Pedir um novo valor ao usuário
+    # Se o usuário não digitar nada, manter o valor atual
 
-    # Usar um for para percorrer a lista de músicas
-    # Se o campo escolhido (artista ou gênero) contiver o texto de busca, adicionar à lista de resultados
+    # Atualizar a música na lista com os novos dados
 
-    # Se a lista de resultados estiver vazia, mostrar mensagem de "Nenhuma música encontrada"
-    # Caso contrário, mostrar os dados das músicas encontradas no mesmo formato da listagem normal
+    # Salvar as mudanças no arquivo JSON
+    # Mostrar mensagem de sucesso
+
+# Função para remover uma música
+def remover_musica():
+    # Verificar se há músicas cadastradas
+    # Se não houver, mostrar mensagem e sair da função
+
+    # Listar todas as músicas com índices
+    # Pedir ao usuário o número da música que deseja remover
+
+    # Verificar se o número digitado é válido
+
+    # Confirmar com o usuário se realmente deseja remover (S/N)
+
+    # Se confirmado, remover a música da lista
+
+    # Salvar as mudanças no arquivo JSON
+    # Mostrar mensagem de sucesso
