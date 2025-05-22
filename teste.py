@@ -19,6 +19,8 @@ def menu():
     print("[2] Listar músicas")
     print("[3] Buscar música")
     print("[4] Sair")
+    print("[5] Editar música")
+    print("[6] Remover música")
 
 def adicionar_musica():
     nome = input("Nome da música: ")
@@ -147,5 +149,9 @@ while True:
     elif opcao == "4":
         print("Saindo do programa. Até mais!")
         break
+    elif opcao == "5":
+        editar_musica()
+    elif opcao == "6":
+        remover_musica()
     else:
         print("Opção inválida. Tente novamente.")
