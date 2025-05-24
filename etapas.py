@@ -1,37 +1,62 @@
-# Função para editar uma música
-def editar_musica():
-    # Verificar se há músicas cadastradas
-    # Se não houver, mostrar mensagem e sair da função
+# ---------------------------------------------
+# PROJETO: Interface gráfica para o catálogo de músicas
+# ETAPA 4: Exibir músicas cadastradas com Tkinter
+# ---------------------------------------------
 
-    # Listar todas as músicas com índices
-    # Pedir ao usuário o número da música que deseja editar
+# 1. Importar as bibliotecas necessárias
+# - tkinter: para criar a interface gráfica
+# - messagebox: para exibir mensagens (caso precise)
+# - json: para carregar os dados salvos no arquivo
+import tkinter as tk
+from tkinter import messagebox
+import json
 
-    # Verificar se o número digitado é válido (dentro da lista)
+# 2. Função para carregar os dados do arquivo JSON
+# - Caso o arquivo não exista ou esteja corrompido, retorna uma lista vazia
+def carregar_dados():
+    try:
+        with open("musicas.json", "r", encoding="utf-8") as arquivo:
+            return json.load(arquivo)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return []
 
-    # Exibir os dados atuais da música escolhida
+# 3. Carregamos a lista de músicas na variável global
+musicas = carregar_dados()
 
-    # Para cada campo (nome, artista, gênero, duração):
-    # Pedir um novo valor ao usuário
-    # Se o usuário não digitar nada, manter o valor atual
+# 4. Criamos uma função para mostrar as músicas em uma lista gráfica (Listbox)
+# - Primeiro limpamos a lista
+# - Depois adicionamos cada música formatada
+def listar_musicas_tk():
+    lista.delete(0, tk.END)
+    if not musicas:
+        lista.insert(tk.END, "Nenhuma música cadastrada.")
+    else:
+        for m in musicas:
+            texto = f"{m['nome']} - {m['artista']} | {m['gênero']} | {m['duração']}"
+            lista.insert(tk.END, texto)
 
-    # Atualizar a música na lista com os novos dados
+# 5. Criamos a janela principal da aplicação
+# - Definimos um título e um tamanho
+janela = tk.Tk()
+janela.title("Catálogo de Músicas")
+janela.geometry("600x400")
 
-    # Salvar as mudanças no arquivo JSON
-    # Mostrar mensagem de sucesso
+# 6. Adicionamos um título de texto no topo da janela
+titulo = tk.Label(janela, text="Minhas Músicas", font=("Arial", 16))
+titulo.pack(pady=10)
 
-# Função para remover uma música
-def remover_musica():
-    # Verificar se há músicas cadastradas
-    # Se não houver, mostrar mensagem e sair da função
+# 7. Criamos um Listbox (lista gráfica) para exibir as músicas
+# - Definimos o tamanho da área
+lista = tk.Listbox(janela, width=80, height=15)
+lista.pack()
 
-    # Listar todas as músicas com índices
-    # Pedir ao usuário o número da música que deseja remover
+# 8. Adicionamos um botão que chama a função de atualizar a lista
+btn_atualizar = tk.Button(janela, text="Atualizar Lista", command=listar_musicas_tk)
+btn_atualizar.pack(pady=10)
 
-    # Verificar se o número digitado é válido
+# 9. Chamamos a função uma vez ao iniciar a interface
+# - Isso faz com que a lista apareça já preenchida
+listar_musicas_tk()
 
-    # Confirmar com o usuário se realmente deseja remover (S/N)
-
-    # Se confirmado, remover a música da lista
-
-    # Salvar as mudanças no arquivo JSON
-    # Mostrar mensagem de sucesso
+# 10. Mantemos a janela aberta com o loop principal do Tkinter
+janela.mainloop()
